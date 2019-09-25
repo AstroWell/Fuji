@@ -38,10 +38,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = Polaris.Port.A.Chute_4294556788
 	link = Polaris.Heatshield.A_4294552484
+	link = .Polaris.Paraglider_4294497750
 	attN = bottom,Polaris.Heatshield.A_4294552484_0|-0.294999987|0_0|-1|0_0|-0.294999987|0_0|-1|0
-	attN = top,Polaris.Port.A.Chute_4294556788_0|0.294999987|0_0|1|0_0|0.294999987|0_0|1|0
+	attN = top,.Polaris.Paraglider_4294497750_0|0.294999987|0_0|1|0_0|0.294999987|0_0|1|0
 	EVENTS
 	{
 	}
@@ -808,228 +808,6 @@ PART
 		hideFlow = False
 		isVisible = True
 		flowMode = Both
-	}
-}
-PART
-{
-	part = Polaris.Port.A.Chute_4294556788
-	partName = Part
-	persistentId = 69853399
-	pos = 0.463300943,24.8550415,-0.042752862
-	attPos = 0,0,0
-	attPos0 = 0,0.319999695,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Grandparent
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 0
-	sqor = 0
-	sepI = 0
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = Polaris.Port.B_4294555170
-	attN = bottom,Polaris.Crew.A_4294564766_0|-0.0250000004|0_0|-1|0_0|-0.0250000004|0_0|-1|0
-	attN = top,Polaris.Port.B_4294555170_0|0.0120000001|0_0|1|0_0|0.0120000001|0_0|1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = Polaris.Port.B_4294555170
-	partName = Part
-	persistentId = 3371775058
-	pos = 0.463300943,24.8920403,-0.042752862
-	attPos = 0,0,0
-	attPos0 = 0,0.0369997025,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = .Polaris.LES_4294148540
-	attN = bottom,Polaris.Port.A.Chute_4294556788_0|-0.0250000004|0_0|-1|0_0|-0.0250000004|0_0|-1|0
-	attN = top,.Polaris.LES_4294148540_0|0.0250000004|0_0|1|0_0|0.0250000004|0_0|1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		acquireForceTweak = 100
-		crossfeed = True
-		stagingEnabled = False
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-			MakeReferenceToggle
-			{
-				actionGroup = None
-			}
-			EnableXFeedAction
-			{
-				actionGroup = None
-			}
-			DisableXFeedAction
-			{
-				actionGroup = None
-			}
-			ToggleXFeedAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorChanger
-		isEnabled = True
-		animState = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
 	}
 }
 PART
@@ -4600,7 +4378,7 @@ PART
 	part = launchClamp1_4294139128
 	partName = Part
 	persistentId = 738372044
-	pos = -3.03826451,2.76507568,-0.0427525006
+	pos = -3.03826737,2.76507568,-0.0427525006
 	attPos = 0,0,0
 	attPos0 = -2.31419528E-09,-4.21391678,1.42794061
 	rot = 1.09085088E-08,0.707106888,-1.09085105E-08,0.707106769
@@ -4707,7 +4485,7 @@ PART
 	part = strutConnector_4293427500
 	partName = CompoundPart
 	persistentId = 240832892
-	pos = -1.61031795,10.8169193,-0.661897421
+	pos = -1.61031795,10.8169193,-0.661898494
 	attPos = 0,0,0
 	attPos0 = -0.619143486,3.83792686,1.78813863E-07
 	rot = -1.22132093E-07,0.707106769,1.22132093E-07,-0.707106888
@@ -4780,7 +4558,7 @@ PART
 	part = strutConnector_4293426378
 	partName = CompoundPart
 	persistentId = 2265804185
-	pos = -1.61031747,10.8318815,0.574820101
+	pos = -1.61031747,10.8318815,0.574821174
 	attPos = 0,0,0
 	attPos0 = 0.617571533,3.85288906,-1.78813863E-07
 	rot = 4.45674608E-08,0.707106948,4.45674395E-08,0.707106709
@@ -4853,7 +4631,7 @@ PART
 	part = strutConnector_4293426252
 	partName = CompoundPart
 	persistentId = 868852444
-	pos = -1.61031795,10.6684647,-0.660157382
+	pos = -1.61031795,10.6684647,-0.660158455
 	attPos = 0,0,0
 	attPos0 = -0.617403448,3.6894722,1.78813863E-07
 	rot = -1.2213205E-07,0.707106769,1.22132079E-07,-0.707106888
@@ -4926,7 +4704,7 @@ PART
 	part = strutConnector_4293425250
 	partName = CompoundPart
 	persistentId = 587918985
-	pos = -1.61031747,10.6687441,0.572177947
+	pos = -1.61031747,10.6687441,0.572179019
 	attPos = 0,0,0
 	attPos0 = 0.614929378,3.68975163,-1.78813863E-07
 	rot = 3.68539723E-08,0.707106888,3.68539581E-08,0.707106769
@@ -5316,7 +5094,7 @@ PART
 	part = launchClamp1_4294138376
 	partName = Part
 	persistentId = 2548151638
-	pos = 3.9648664,2.76507568,-0.0427535251
+	pos = 3.96486926,2.76507568,-0.0427535251
 	attPos = 0,0,0
 	attPos0 = 6.96165703E-09,-4.21391678,1.42794085
 	rot = -1.09085114E-08,0.707106709,-1.09085079E-08,-0.707106948
@@ -5423,7 +5201,7 @@ PART
 	part = strutConnector_4293426894
 	partName = CompoundPart
 	persistentId = 116963555
-	pos = 2.53691983,10.8169193,0.576391637
+	pos = 2.53691983,10.8169193,0.57639271
 	attPos = 0,0,0
 	attPos0 = -0.619143665,3.83792686,1.1920924E-07
 	rot = 1.22132107E-07,-0.707106948,1.22132079E-07,-0.707106709
@@ -5496,7 +5274,7 @@ PART
 	part = strutConnector_4293426768
 	partName = CompoundPart
 	persistentId = 1515056309
-	pos = 2.53691936,10.8318815,-0.660325885
+	pos = 2.53691936,10.8318815,-0.660326958
 	attPos = 0,0,0
 	attPos0 = 0.617571354,3.85288906,-1.1920924E-07
 	rot = 4.4567436E-08,0.70710665,-4.45674644E-08,-0.707107008
@@ -5569,7 +5347,7 @@ PART
 	part = strutConnector_4293425670
 	partName = CompoundPart
 	persistentId = 1065768966
-	pos = 2.53691983,10.6684647,0.574651599
+	pos = 2.53691983,10.6684647,0.574652672
 	attPos = 0,0,0
 	attPos0 = -0.617403626,3.6894722,1.1920924E-07
 	rot = 1.22132079E-07,-0.707106948,1.2213205E-07,-0.707106709
@@ -5642,7 +5420,7 @@ PART
 	part = strutConnector_4293425544
 	partName = CompoundPart
 	persistentId = 2052038089
-	pos = 2.53691936,10.6687441,-0.65768373
+	pos = 2.53691936,10.6687441,-0.657684803
 	attPos = 0,0,0
 	attPos0 = 0.614929199,3.68975163,-1.1920924E-07
 	rot = 3.68539546E-08,0.707106709,-3.68539759E-08,-0.707106948
@@ -6227,6 +6005,228 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = .Polaris.Paraglider_4294497750
+	partName = Part
+	persistentId = 1562521199
+	pos = 0.463300943,24.8550415,-0.042752862
+	attPos = 0,0,0
+	attPos0 = 0,0.319999695,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = Polaris.Port.B_4294555170
+	attN = bottom,Polaris.Crew.A_4294564766_0|-0.0250000004|0_0|-1|0_0|-0.0250000004|0_0|-1|0
+	attN = top,Polaris.Port.B_4294555170_0|0.0120000001|0_0|1|0_0|0.0120000001|0_0|1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 1000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = Polaris.Port.B_4294555170
+	partName = Part
+	persistentId = 3371775058
+	pos = 0.463300943,24.8920403,-0.042752862
+	attPos = 0,0,0
+	attPos0 = 0,0.0369987488,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = .Polaris.LES_4294148540
+	attN = bottom,.Polaris.Paraglider_4294497750_0|-0.0250000004|0_0|-1|0_0|-0.0250000004|0_0|-1|0
+	attN = top,.Polaris.LES_4294148540_0|0.0250000004|0_0|1|0_0|0.0250000004|0_0|1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 100
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleColorChanger
+		isEnabled = True
+		animState = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
 		}
 		UPGRADESAPPLIED
 		{
