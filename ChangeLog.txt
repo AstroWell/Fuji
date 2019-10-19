@@ -1,4 +1,12 @@
 
+Fuji 1.1 [2019-10-19]
+-------------------------------
+
+	- Texture converted to DDS DXT5
+	- Engine model updated for KSP 1.8
+	- Shader Fix for 1.8
+	
+	
 Fuji 1.0 [2019-09-25]
 -------------------------------
 
