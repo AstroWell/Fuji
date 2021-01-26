@@ -3,6 +3,11 @@ Fuji 1.2 [2021-01-20]
 
 	- Fix KSP 1.11 Part mass issue
 	- Add KSP 1.11 Inventory support
+	- Add Waterfall Support
+	- Add Inventory Thumbnails
+	- Breaking Force review
+	- Physics Signifiance Review
+	- Max temp review
 	
 Fuji 1.1 [2019-10-19]
 -------------------------------
